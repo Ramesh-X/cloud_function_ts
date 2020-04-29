@@ -1,4 +1,4 @@
-import {DBModel} from "../models/dBModel";
+import {DBModel} from "./dBModel";
 import {DocumentData, DocumentSnapshot} from '@google-cloud/firestore'
 
 export interface MapperI<T extends DBModel> {

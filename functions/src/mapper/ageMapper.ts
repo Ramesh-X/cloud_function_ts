@@ -1,4 +1,4 @@
-import {MapperI} from "./mapperI";
+import {MapperI} from "../interfaces/mapperI";
 import {Age} from "../models/age";
 
 export class AgeMapper implements MapperI<Age> {

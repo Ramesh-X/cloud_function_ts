@@ -1,5 +1,5 @@
 import {DocumentReference, Timestamp} from '@google-cloud/firestore'
-import {DBModel} from "./dBModel";
+import {DBModel} from "../interfaces/dBModel";
 
 export class Child extends DBModel {
   static readonly NAME_FIELD = 'name';

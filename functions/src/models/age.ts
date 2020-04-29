@@ -1,5 +1,5 @@
 import {DocumentReference} from '@google-cloud/firestore'
-import {DBModel} from "./dBModel";
+import {DBModel} from "../interfaces/dBModel";
 
 export class Age extends DBModel {
   static readonly CHILD_FIELD = 'child';
