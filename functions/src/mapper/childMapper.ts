@@ -1,7 +1,7 @@
-import {MapperI} from "../interfaces/mapperI";
+import {IMapper} from "../interfaces/mapper";
 import {Child} from "../models/child";
 
-export class ChildMapper implements MapperI<Child> {
+export class ChildMapper implements IMapper<Child> {
   fromSnapshot(snapshot: FirebaseFirestore.DocumentSnapshot): Child | undefined {
     if (snapshot === null || snapshot === undefined) return undefined;
     const data = snapshot.data();
