@@ -2,6 +2,11 @@ import {DocumentReference} from '@google-cloud/firestore'
 import {DBModel} from "./dBModel";
 
 export class Age extends DBModel {
+  static readonly CHILD_FIELD = 'child';
+  static readonly YEARS_FIELD = 'years';
+  static readonly MONTHS_FIELD = 'months';
+  static readonly DAYS_FIELD = 'days';
+
   child: DocumentReference;
   years: number;
   months: number;
