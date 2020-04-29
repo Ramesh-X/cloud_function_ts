@@ -6,6 +6,7 @@ export class ChildMapper implements IMapper<Child> {
     if (snapshot === null || snapshot === undefined) return undefined;
     const data = snapshot.data();
     if (data === null || data === undefined) return undefined;
+
     return new Child(snapshot.ref, data[Child.NAME_FIELD], data[Child.DOB_FIELD]);
   }
 

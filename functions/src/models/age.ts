@@ -7,12 +7,12 @@ export class Age extends DBModel {
   static readonly MONTHS_FIELD = 'months';
   static readonly DAYS_FIELD = 'days';
 
-  child: DocumentReference;
-  years: number;
-  months: number;
-  days: number;
+  child: DocumentReference | undefined;
+  years: number | undefined;
+  months: number | undefined;
+  days: number | undefined;
 
-  constructor(ref: DocumentReference, child: DocumentReference, years: number, months: number, days: number) {
+  constructor(ref?: DocumentReference, child?: DocumentReference, years?: number, months?: number, days?: number) {
     super(ref);
     this.child = child;
     this.years = years;

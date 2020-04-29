@@ -5,10 +5,10 @@ export class Child extends DBModel {
   static readonly NAME_FIELD = 'name';
   static readonly DOB_FIELD = 'dob';
 
-  name: string;
-  dob: Timestamp;
+  name: string | undefined;
+  dob: Timestamp | undefined;
 
-  constructor(ref: DocumentReference, name: string, dob: Timestamp) {
+  constructor(ref?: DocumentReference, name?: string, dob?: Timestamp) {
     super(ref);
     this.name = name;
     this.dob = dob;

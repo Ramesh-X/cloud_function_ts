@@ -8,7 +8,8 @@ export class AgeDAO {
   mapper = new AgeMapper();
 
   async add(age: Age) {
-    const docRef = this.firestore.collection(DBUtil.AGE).doc(age?.id);
+    const collectionRef = this.firestore.collection(DBUtil.AGE);
+    const docRef = (age.id === null || age.id === undefined) ? collectionRef.doc() : collectionRef.doc(age.id);
     await docRef.set(this.mapper.toMap(age));
   }
 }

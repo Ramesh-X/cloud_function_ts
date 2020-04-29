@@ -6,6 +6,7 @@ export class AgeMapper implements IMapper<Age> {
     if (snapshot === null || snapshot === undefined) return undefined;
     const data = snapshot.data();
     if (data === null || data === undefined) return undefined;
+
     return new Age(snapshot.ref, data[Age.CHILD_FIELD],
       data[Age.YEARS_FIELD], data[Age.MONTHS_FIELD], data[Age.DAYS_FIELD]);
   }
