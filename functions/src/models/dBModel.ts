@@ -2,7 +2,7 @@ import {DocumentReference} from '@google-cloud/firestore'
 
 export abstract class DBModel {
   ref: DocumentReference;
-  id: String;
+  id: string;
 
   protected constructor(ref: DocumentReference) {
     this.ref = ref;
