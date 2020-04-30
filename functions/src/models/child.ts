@@ -1,4 +1,4 @@
-import {DocumentReference, Timestamp} from '@google-cloud/firestore'
+import {DocumentReference} from '@google-cloud/firestore'
 import {DBModel} from "../interfaces/dBModel";
 
 export class Child extends DBModel {
@@ -6,9 +6,9 @@ export class Child extends DBModel {
   static readonly DOB_FIELD = 'dob';
 
   name: string | undefined;
-  dob: Timestamp | undefined;
+  dob: Date | undefined;
 
-  constructor(ref?: DocumentReference, name?: string, dob?: Timestamp) {
+  constructor(ref?: DocumentReference, name?: string, dob?: Date) {
     super(ref);
     this.name = name;
     this.dob = dob;

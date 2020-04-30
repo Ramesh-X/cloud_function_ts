@@ -5,7 +5,7 @@ import moment = require("moment");
 export class CreateAgeService {
   childToAge(child: Child): Age {
     const now = moment();
-    const duration = moment.duration(now.diff(child.dob?.toDate()));
+    const duration = moment.duration(now.diff(child.dob));
     return new Age(undefined, child.ref, duration.years(), duration.months(), duration.days());
   }
 }
