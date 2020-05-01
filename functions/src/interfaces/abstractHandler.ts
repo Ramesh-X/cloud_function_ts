@@ -1,4 +1,4 @@
-import DocumentSnapshot = FirebaseFirestore.DocumentSnapshot;
+import {DocumentSnapshot} from '@google-cloud/firestore'
 import {Change, EventContext} from "firebase-functions";
 import {CallableContext} from "firebase-functions/lib/providers/https";
 

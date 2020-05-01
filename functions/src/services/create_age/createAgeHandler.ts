@@ -2,7 +2,6 @@ import {AbstractHandler} from "../../interfaces/abstractHandler";
 import {EventContext} from "firebase-functions";
 import {ChildMapper} from "../../mapper/childMapper";
 import {CreateAgeService} from "./createAgeService";
-import {AgeDAO} from "../../dao/ageDAO";
 
 export class CreateAgeHandler extends AbstractHandler {
   async onCreate(snap: FirebaseFirestore.DocumentSnapshot, context: EventContext): Promise<any> {
@@ -12,8 +11,7 @@ export class CreateAgeHandler extends AbstractHandler {
       console.log("Console log");
       return;
     }
-    const age = new CreateAgeService().childToAge(child);
-    await new AgeDAO().add(age);
+    await new CreateAgeService().processChild(child);
     console.log("All Done!");
   }
 }
